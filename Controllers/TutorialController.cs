@@ -17,7 +17,7 @@ namespace asp.netCoreIntro.Controllers
             _tutorialDBContext = context;
         }
 
-        public ActionResult Index()
+        public ActionResult CreateTutorial()
         {
             return View("CreateTutorial");
         }
