@@ -1,0 +1,25 @@
+﻿@model Tutorial; 
+
+@{
+    ViewData["Title"] = "DisplayTutorialDetails";
+}
+
+
+<h1>Product Details</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <td><strong>ID:</strong></td>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <td><strong>Name:</strong></td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td><strong>Description:</strong></td>
+        <td>@Model.Description</td>
+    </tr>
+</table>
+
+<p><a asp-action="Contact">Back to List</a></p>

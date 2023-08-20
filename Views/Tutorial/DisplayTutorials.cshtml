@@ -1,0 +1,37 @@
+﻿@model List<Tutorial>;
+@{
+    ViewData["Title"] = "DisplayTutorials";
+}
+
+<h1>Product List</h1>
+@*<gridview items="@Model" class="table table-bordered table-striped">
+    <columns>
+        <column title="ID" field="Id" />
+        <column title="Name" field="Name" />
+        <column title="Description" field="Description" />
+        <column title="Details">
+            <a href="@Url.Action("getSingleDetails", "Tutorial", new { Id = @items.Id })">Details</a>
+        </column>
+    </columns>
+</gridview>*@
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tutorial in Model)
+        {
+            <tr>
+                <td>@tutorial.Id</td>
+                <td>@tutorial.Name</td>
+                <td> @tutorial.Description</td>
+                <td><a href="@Url.Action("getSingleDetails","Tutorial",new{Id=tutorial.Id})">Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
